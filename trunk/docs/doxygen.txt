@@ -1,0 +1,26 @@
+Building the Doxygen Help Files
+===============================
+
+1) Download Doxygen from http://www.stack.nl/~dimitri/doxygen/
+
+2) Once installed, run the Doxywizard.
+
+3) Click Wizard.
+
+4) In the Source code directory box, select the folder where the
+Power Tab Parser source code resides.
+
+5) In the Destination directory box, select the folder where you want
+the help files to be written to.
+
+6) Click OK.
+
+7) Click Save, enter a file name for the project, and then click Save
+again.
+
+8) In the Specify the directory in which to run doxygen box, select the
+bin folder within the folder where you installed doxygen.
+
+9) Click Start. To view the help files, browse to the html folder within
+the destination folder set in Step 5.
+
