@@ -1,0 +1,86 @@
+Building Power Tab Parser Using Visual Studio 2003
+==================================================
+
+
+Step 1 - Installing and Setting Up wxWidgets
+--------------------------------------------
+
+1) The project relies on wxWidgets for it's GUI. You must download wxWidgets
+2.4.2 for Windows from http://www.wxwidgets.org/. Version 2.4.2 is the only
+version guaranteed to work, so don't download any other version.
+
+2) Once installed, you'll need to setup an environmental path variable that's
+required by the project:
+
+a) Click Start -> Control Panel -> Performance and Maintenance -> System ->
+Advanced Tab
+b) Click Environment Variables
+c) Under the System variables heading, click New
+d) In the Variable name box, type WXWIN (must be capital letters)
+e) In the Variable value box, enter the full path to the folder where wxWidgets
+is installed. (i.e. C:\wxWindows-2.4.2)
+f) Click OK
+g) Click OK
+h) Click OK
+
+
+Step 2 - Building wxWidgets
+---------------------------
+
+1) In the folder where you installed wxWidgets, open the src folder, and then
+double-click the wxWindows.dsw file so that the project opens in Visual
+Studio. When it asks to convert the project, click Yes To All.
+
+2) On the Build menu, click Batch Build.
+
+3) Make sure there is a check in the Build column beside both configurations
+(Debug/Release) for the following projects in the solution:
+
+a) jpeg
+b) png
+c) regex
+d) tiff
+e) zlib
+
+4) Make sure there is a check in the Build column beside the Debug and Release
+configurations for the wxWindows project. (you don't need to check the DLL or
+Unicode configurations, the parser project is statically linked)
+
+5) Click the Build button and wait for the build to complete.
+
+
+Step 3 - Building the XML Resource Library
+------------------------------------------
+
+1) In the folder where you installed wxWidgets, open the contrib\src\xrc folder
+and click the XrcVC.dsw file so that the project opens in Visual Studio. When
+it asks to convert the project, click Yes To All.
+
+2) On the Build menu, click Batch Build.
+
+3) Make sure there is a check in the Build column beside the Debug and Release
+configurations for the XrcVc project. (you don't need to check the DLL
+configurations, the parser project is statically linked)
+
+4) Click the Build button and wait for the builds to complete.
+
+
+Step 4 - Building Power Tab Parser
+----------------------------------
+
+1) Download the Power Tab Parser source:
+http://developer.berlios.de/projects/ptparser/
+
+- or -
+
+1) Checkout the latest source using Subversion/TortoiseSVN:
+svn://svn.berlios.de/ptparser/trunk
+
+2) Double-click the powertabparser.sln file in the project folder so that the
+project opens in Visual Studio.
+
+3) On the Build menu, click Batch Build.
+
+4) Click Select All.
+
+5) Click the Build button and wait for the build to complete.
